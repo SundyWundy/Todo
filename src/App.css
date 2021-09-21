@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.Title {
+  background-color: #7393b3;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.inputBox {
+  width: 50%;
+  padding-left: 10px;
+}
+
+.descBox {
+  margin-top: 25px;
+  padding-bottom: 75px;
+  padding-left: 10px;
+  height: 150px;
+  width: 50%;
+}
+
+.addList {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #7393b3;
+  color: white;
+  height: 35px;
+  width: 50px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.clearList {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  background-color: #e97451;
+  color: white;
+  height: 35px;
+  width: 125px;
+  border-radius: 5px;
+  border-style: none;
+}
