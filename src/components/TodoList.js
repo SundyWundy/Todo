@@ -6,9 +6,7 @@ export default function TodoList({theTodo, settheTodo}) {
     
     return (
         <div>
-            {  theTodo.filter(Todo => Todo.name).length > 0 &&
- <h5 className="showTodoR">{theTodo.filter(Todo => !Todo.complete).length} uncompleted tasks</h5>
-}
+            
             {
                theTodo.map((To) => (
                     <Todo theTodo={theTodo} settheTodo={settheTodo} To={To} key={To.id} name={To.name} description={To.description} complete={To.complete}/>
@@ -18,6 +16,10 @@ export default function TodoList({theTodo, settheTodo}) {
         </div>
     )
 }
+
+/*{  theTodo.filter(Todo => Todo.name).length > 0 &&
+ <h5 className="showTodoR">{theTodo.filter(Todo => !Todo.complete).length} uncompleted tasks</h5>
+} */
 
 
 // <input type="checkbox" checked={To.complete} onChange={handleTodo}/>

@@ -1,12 +1,8 @@
-
 import './App.css';
-
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {v4 as uuidv4} from 'uuid'
-
 import TodoList from './components/TodoList';
 import { Container } from 'react-bootstrap';
-
 import { Alert } from 'react-bootstrap';
 
 function App() {
@@ -14,6 +10,22 @@ function App() {
     const todoName = useRef(null);
     const [theTodo, settheTodo] = useState([]);    
     const [toggleAlert, settoggleAlert] = useState(false);
+
+    useEffect(()=>{
+      if(localStorage.getItem("theTodo") === null){
+            localStorage.setItem("theTodo", JSON.stringify([]))
+         }
+         else{
+           let getTodo = JSON.parse(localStorage.getItem("theTodo"))
+          settheTodo(getTodo)
+          }
+    }, [])
+
+    useEffect(()=>{
+         localStorage.setItem("theTodo", JSON.stringify(theTodo))
+    }, [theTodo])
+ 
+    
 
 const addToList = () =>{
   const todoN = todoName.current.value
